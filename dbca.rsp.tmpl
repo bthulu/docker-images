@@ -125,7 +125,7 @@ SYSTEMPASSWORD="###ORACLE_PWD###"
 # Default value : NONE
 # Mandatory     : No
 #-----------------------------------------------------------------------------
-EMCONFIGURATION="LOCAL"
+#EMCONFIGURATION=
 
 #-----------------------------------------------------------------------------
 # Name          : DISABLESECURITYCONFIGURATION
@@ -145,7 +145,7 @@ DISABLESECURITYCONFIGURATION="NONE"
 # Default value : None
 # Mandatory     : Yes, if LOCAL specified for EMCONFIGURATION
 #-----------------------------------------------------------------------------
-SYSMANPASSWORD="###ORACLE_PWD###"
+#SYSMANPASSWORD=
 
 #-----------------------------------------------------------------------------
 # Name          : DBSNMPPASSWORD
@@ -155,7 +155,7 @@ SYSMANPASSWORD="###ORACLE_PWD###"
 # Default value : None
 # Mandatory     : Yes, if EMCONFIGURATION is specified
 #-----------------------------------------------------------------------------
-DBSNMPPASSWORD="###ORACLE_PWD###"
+#DBSNMPPASSWORD=
 
 #-----------------------------------------------------------------------------
 # Name          : CENTRALAGENT
@@ -357,7 +357,7 @@ NATIONALCHARACTERSET="AL16UTF16"
 # Mandatory     : NO
 #-----------------------------------------------------------------------------
 # set java_jit_enabled=false to prevent install bug:9294055, insufficient shm-object space, identifier 'CATBUNDLECREATEDIR' must be declared
-INITPARAMS=audit_trail=none,audit_sys_operations=false,java_jit_enabled=false
+INITPARAMS=db_recovery_file_dest=###ORACLE_BASE###/oradata/fast_recovery_area,audit_trail=none,audit_sys_operations=false,java_jit_enabled=false
 
 #-----------------------------------------------------------------------------
 # Name          : SAMPLESCHEMA

@@ -1,4 +1,4 @@
-FROM oraclelinux:7-slim as base
+FROM centos:7 as base
 
 # Labels
 # ------
@@ -44,8 +44,8 @@ RUN chmod ug+x $INSTALL_DIR/*.sh && \
     sync && \
     $INSTALL_DIR/$CHECK_SPACE_FILE && \
     $INSTALL_DIR/$SETUP_LINUX_FILE && \
-    rm -rf $INSTALL_DIR
-
+    rm -rf $INSTALL_DIR && \
+    rm -rf /tmp/*
 
 
 #############################################
